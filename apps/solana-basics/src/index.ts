@@ -24,8 +24,8 @@ import {
 } from '@solana-program/token'
 
 // Create Connection Local Validators
-const rpc = createSolanaRpc('https://api.devnet.solana.com');
-const rpcSubscriptions = createSolanaRpcSubscriptions('wss://api.devnet.solana.com');
+const rpc = createSolanaRpc('http://127.0.0.1:8899');
+const rpcSubscriptions = createSolanaRpcSubscriptions('ws://127.0.0.1:8900');
 
 // Create FeePayer wallet/keypair
 const feePayer = await generateKeyPairSigner();
