@@ -29,8 +29,9 @@ const rpcSubscriptions = createSolanaRpcSubscriptions('ws://127.0.0.1:8900');
 
 // Create FeePayer wallet/keypair
 const feePayer = await generateKeyPairSigner();
-
 console.log(`feePayer: ${feePayer}`, `address: ${feePayer.address}`);
+console.log([...feePayer.secretKey]); // ⚠️ never log this in production
+
 
 // Airdrop Solana to feePayer
 await airdropFactory({rpc, rpcSubscriptions})({
@@ -74,7 +75,7 @@ const {value: blockhash} = await rpc.getLatestBlockhash().send();
 // Create Transaction Message
 const transactionMessage = pipe(
     createTransactionMessage({version: 0}),
-    (tx) => setTransactionMessageFeePayerSigner(feePayer, tx) ,
+    (tx) => setTransactionMessageFeePayerSigner(feePayer, tx),
     (tx) => setTransactionMessageLifetimeUsingBlockhash(blockhash, tx),
     (tx) => appendTransactionMessageInstructions(instructions, tx)
 );

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx './src/index.ts'",
+    "prac": "tsx './src/prac.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

@@ -36,3 +36,9 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+#solana-release
+solana-release
+
+# Solana Test Validator
+test-ledger
