@@ -2,7 +2,7 @@
     "name": "Asta",
     "symbol": "Asta",
     "description": "Never Give Up",
-    "image": "https://raw.githubusercontent.com/solana-developers/opos-asset/main/assets/DeveloperPortal/image.png",
+    "image": "https://raw.githubusercontent.com/Krishna-Mulik/solana-practice/refs/heads/main/apps/solana-basics/token-metadatas/asta/asta-black-clover.webp",
     "attributes": [
       {
         "trait_type": "Item",
